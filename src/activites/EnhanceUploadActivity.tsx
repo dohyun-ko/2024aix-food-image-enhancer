@@ -57,7 +57,7 @@ const EnhanceUploadActivity: ActivityComponentType = () => {
             <img
               src={URL.createObjectURL(image)}
               alt="selected"
-              className={'w-[80%]'}
+              className={'w-[80%] rounded-lg'}
             />
 
             <div className={'mt-4 flex flex-col items-stretch'}>

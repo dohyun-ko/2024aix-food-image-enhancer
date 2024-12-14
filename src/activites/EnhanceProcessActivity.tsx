@@ -1,8 +1,18 @@
 import Spinner from '@/components/ui/spinner';
+import { useFlow } from '@/stackflow';
 import { AppScreen } from '@stackflow/plugin-basic-ui';
 import { ActivityComponentType } from '@stackflow/react';
+import { useEffect } from 'react';
 
 const EnhanceProcessActivity: ActivityComponentType = () => {
+  const { push } = useFlow();
+
+  useEffect(() => {
+    setTimeout(() => {
+      push('EnhanceCompleteActivity', {});
+    }, 3000);
+  }, [push]);
+
   return (
     <AppScreen>
       <div
